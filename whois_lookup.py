@@ -20,7 +20,7 @@ def main():
         addresses = file_object.readlines()
         for address in addresses:
             print(address)
-            result = lookup_address(address)
+            result = lookup_address(address.strip("\n"))
             whois_info.append(result)
 
     with open('whois_info.txt','w') as file_object1:
